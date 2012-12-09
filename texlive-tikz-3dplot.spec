@@ -57,3 +57,20 @@ expressed as parametric functions of polar angles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120112-1
++ Revision: 762746
+- Update to latest upstream package
+
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110627-2
++ Revision: 756885
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110627-1
++ Revision: 719742
+- texlive-tikz-3dplot
+- texlive-tikz-3dplot
+- texlive-tikz-3dplot
+
