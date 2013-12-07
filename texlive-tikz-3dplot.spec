@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-tikz-3dplot
 Version:	20120112
-Release:	3
+Release:	4
 Summary:	Coordinate transformation styles for 3d plotting in TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-3dplot
