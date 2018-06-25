@@ -5,7 +5,7 @@
 # catalog-license lppl1.3
 # catalog-version undef
 Name:		texlive-tikz-3dplot
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Coordinate transformation styles for 3d plotting in TikZ
 Group:		Publishing
