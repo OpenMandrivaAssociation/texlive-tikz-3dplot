@@ -1,18 +1,12 @@
-# revision 25087
-# category Package
-# catalog-ctan /graphics/pgf/contrib/tikz-3dplot
-# catalog-date 2012-01-12 00:06:34 +0100
-# catalog-license lppl1.3
-# catalog-version undef
 Name:		texlive-tikz-3dplot
-Version:	20190228
+Version:	25087
 Release:	1
 Summary:	Coordinate transformation styles for 3d plotting in TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-3dplot
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-3dplot.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-3dplot.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-3dplot.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-3dplot.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ coordinates, where both the radius and fill color can be
 expressed as parametric functions of polar angles.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,27 +44,10 @@ expressed as parametric functions of polar angles.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120112-1
-+ Revision: 762746
-- Update to latest upstream package
-
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110627-2
-+ Revision: 756885
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110627-1
-+ Revision: 719742
-- texlive-tikz-3dplot
-- texlive-tikz-3dplot
-- texlive-tikz-3dplot
-
